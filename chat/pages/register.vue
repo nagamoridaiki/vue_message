@@ -62,6 +62,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
     data() {
         return {
@@ -85,6 +87,8 @@ export default {
         }
     },
     methods: {
+        ...mapMutations('alert', ['setMessage']),
+
         selectImage() {
             this.$refs.image.click()
         },
@@ -162,7 +166,7 @@ export default {
                     })
                     this.$router.push('/')
             } catch (e) {
-                console.log(e)
+                this.setMessage({ message: '登録に失敗しました。' })
             }
         }
     }
