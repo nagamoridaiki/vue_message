@@ -20,6 +20,6 @@
     "babel-jest": "^26.1.0",
     "filesystem": "^1.0.1",
     "jest": "^26.1.0",
-    "vue-jest": "^3.0.4"
+    "vue-jest": "^4.0.1"
   }
 }
